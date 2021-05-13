@@ -1,9 +1,7 @@
 <template>
 <div style="width:700px; margin:auto; padding-top:100px;">
-  <nav>
-    <router-link class="link"  style="cursor:pointer;" to="/" tag="p" active-class="link-">Home</router-link>
-    <router-link class="link" style="cursor:pointer;" to="/users" tag="p">Users</router-link>
-  </nav>
+    <router-view name="header"></router-view>
+    <transition name="fade" mode="out-in">
     <router-view>
       <div class="main">
         <button @click="myAnimation = 'fade'">fade</button>
@@ -122,6 +120,7 @@
       </div>
       </div>
     </router-view>
+    </transition>
 </div>
 
 
@@ -290,5 +289,8 @@ div{
 .link{
   display: inline;
   margin-right: 10px;
+}
+.link-active{
+  font-size: 30px;
 }
 </style>
