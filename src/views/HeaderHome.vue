@@ -2,7 +2,7 @@
   <nav>
     <h2>Home</h2>
     <router-link class="link"  style="cursor:pointer;" to="/" tag="p" active-class="link-active" exact>Home</router-link>
-    <router-link class="link" style="cursor:pointer;" to="/users" tag="p" active-class="link-active" exact>Users</router-link>
+    <router-link class="link" style="cursor:pointer;" to="/users/1/profile#next-user" tag="p" active-class="link-active" exact>Users</router-link>
   </nav>
 </template>
 <style scoped>

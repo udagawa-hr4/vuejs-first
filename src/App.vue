@@ -1,7 +1,7 @@
 <template>
 <div style="width:700px; margin:auto; padding-top:100px;">
     <router-view name="header"></router-view>
-    <transition name="fade" mode="out-in">
+    <transition name="fade" mode="out-in" @before-enter="beforeE">
     <router-view>
       <div class="main">
         <button @click="myAnimation = 'fade'">fade</button>
@@ -169,6 +169,9 @@ export default {
    ComponentB
   },
   methods:{
+    beforeE(){
+      this.$root.$emit('triggerScroll');
+    },
     incrementNumber(value){
       console.log(value)
       this.number = value

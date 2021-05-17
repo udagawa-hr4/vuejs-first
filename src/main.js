@@ -29,6 +29,13 @@ Vue.mixin({
 //   console.log(binding.value)
 
 // });
+router.beforeEach((to,from,next)=>{
+  console.log("global-beforeEach");
+  if(to.path === '/users/1'){
+    next({path:"/"})
+  }
+  next()
+ });
 new Vue({
   router: router,
   render: h => h(App),
